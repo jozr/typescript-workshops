@@ -10,3 +10,8 @@ enum Enum {
   two = 2,
   three = 3
 }
+
+// function
+const fooFunction = (array: string[]): void => {
+  array.forEach((message) => console.log(message))
+}
