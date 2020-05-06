@@ -49,6 +49,8 @@ This challenge requires string interpolation and input/return typing for functio
 npm test two-fer/
 ```
 
+*Taken from an [Exercism](https://exercism.io/) challenge
+
 ### Space Age
 
 This challenge requires more complex typing.
@@ -56,3 +58,5 @@ This challenge requires more complex typing.
 ```shell
 npm test space-age/
 ```
+
+*Taken from an [Exercism](https://exercism.io/) challenge
