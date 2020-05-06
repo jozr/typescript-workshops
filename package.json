@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test:unit": "jest --no-cache",
-    "test:lint": "eslint space-age/*.ts && eslint two-fer/*.ts",
+    "test:lint": "eslint space-age/*.ts && eslint two-fer/*.ts && eslint gimme-it/*.ts",
     "test": "npm run test:lint && npm run test:unit",
     "compile-typescript": "tsc tsc-playground/index.ts"
   },
