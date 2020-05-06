@@ -12,7 +12,8 @@ stillNotSure.ifItExists(); // okay, ifItExists might exist at runtime
 stillNotSure.toFixed(); // okay, toFixed exists (but the compiler doesn't check)
 
 const prettySure: Object = 4;
-prettySure.toFixed(); // Error: Property 'toFixed' doesn't exist on type 'Object'.
+// COMMENTED OUT
+// prettySure.toFixed(); // Error: Property 'toFixed' doesn't exist on type 'Object'.
 
 // Note: Avoid using Object in favor of the non-primitive object type as described in our Do’s and Don’ts section.
 
@@ -32,7 +33,8 @@ function warnUser(): void {
 // Declaring variables of type void is not useful because you can only assign null (only if --strictNullChecks is not specified, see next section) or undefined to them:
 
 let unusable: void = undefined;
-unusable = null; // OK if `--strictNullChecks` is not given
+// COMMENTED OUT
+// unusable = null; // OK if `--strictNullChecks` is not given
 
 // Null and Undefined #
 // In TypeScript, both undefined and null actually have their own types named undefined and null respectively. Much like void, they’re not extremely useful on their own:
@@ -80,7 +82,8 @@ declare function create(o: object | null): void;
 create({ prop: 0 }); // OK
 create(null); // OK
 
-create(42); // Error
-create("string"); // Error
-create(false); // Error
-create(undefined); // Error
+// COMMENTED OUT
+// create(42); // Error
+// create("string"); // Error
+// create(false); // Error
+// create(undefined); // Error
