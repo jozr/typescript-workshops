@@ -1,9 +1,19 @@
-// Another fundamental part of creating programs in JavaScript for webpages and servers alike is working with textual data. As in other languages, we use the type string to refer to these textual datatypes. Just like JavaScript, TypeScript also uses double quotes (") or single quotes (') to surround string data.
+/*
+Another fundamental part of creating programs in JavaScript for webpages and
+servers alike is working with textual data. As in other languages, we use the
+type string to refer to these textual datatypes. Just like JavaScript,
+TypeScript also uses double quotes (") or single quotes (') to surround string
+data.
+*/
 
 let color: string = "blue";
 color = 'red';
 
-// You can also use template strings, which can span multiple lines and have embedded expressions. These strings are surrounded by the backtick/backquote (`) character, and embedded expressions are of the form ${ expr }.
+/*
+You can also use template strings, which can span multiple lines and have
+embedded expressions. These strings are surrounded by the backtick/backquote (`)
+character, and embedded expressions are of the form ${ expr }.
+*/
 
 const fullName: string = `Bob Bobbington`;
 const age: number = 37;
