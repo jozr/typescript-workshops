@@ -5,3 +5,6 @@ class SpaceAge {
 }
 
 export default SpaceAge
+
+// Possible solutions:
+// https://exercism.io/tracks/typescript/exercises/space-age/solution

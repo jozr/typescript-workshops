@@ -1,8 +1,8 @@
 // string
-const string: string = "foo"
+const string = "foo"
 
 // boolean
-const boolean: boolean = false
+const boolean = false
 
 // enum
 enum Enum {
