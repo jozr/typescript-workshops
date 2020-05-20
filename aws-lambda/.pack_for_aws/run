@@ -1,0 +1,26 @@
+#!/bin/bash
+set -e
+
+echo "Creating build folder"
+rm -rf build && mkdir build
+
+echo "Copying source code"
+cp -r {../package.json,../package-lock.json} build
+
+echo "Transpiling TypeScript"
+npx tsc
+
+echo "Installing prod dependencies"
+(
+  cd build && npm ci --production
+)
+
+echo "Zipping files"
+(
+  cd build && zip -r index.zip * > /dev/null
+)
+
+echo "Cleaning up"
+(
+  cd build && ls | grep -v index.zip | xargs rm -rf
+)

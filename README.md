@@ -83,19 +83,17 @@ and return the response:
 ```json
 {
   "statusCode": 200,
-  "body": {
-    "user": {
-      "id": "abc123",
-      "email": "abc123@email.com"
-    }
-  }
+  "body": "{\"user\":{\"id\":\"abc123\",\"email\":\"abc123@email.com\"}}"
 }
 ```
 
 The following steps are recommended:
 
 1. Create a test (TDD!)
-2. Pass the test
-3. Include all required types
-4. Compile the TypeScript source code
-5. Zip up the file for AWS
+1. Pass the test
+    1. Hint: `npm test aws-lambda/`
+1. Resolve all required types
+1. Compile the TypeScript source code
+    1. Hint: `npx tsc`
+1. Zip up the file for AWS
+    1. Hint: `chmod +x .pack_for_aws/run`

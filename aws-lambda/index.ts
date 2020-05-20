@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/camelcase */
 // https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html
 
-import {} from 'aws-lambda'
+import { APIGatewayProxyEvent, Context, APIGatewayProxyResult } from 'aws-lambda'
 
-export const handler = () => null;
+export const handler = (_event: any, _context: any) => {
+  return null
+};
