@@ -60,3 +60,40 @@ npm test space-age/
 ```
 
 *Taken from an [Exercism](https://exercism.io/) challenge
+
+### AWS Lambda
+
+This folder contains some basic set up for a potential AWS Lambda written in TypeScript.
+
+The goal is to create a [deployable package](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-package.html) for an AWS Lambda for a [supported Node.js runtime](https://github.com/nodejs/Release#release-schedule).
+
+Let's imagine there's an endpoint `site.com/users/{user_id}`. This is proxied through AWS API Gateway and parsed into an [event](https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html) for AWS Lambda consumption.
+
+The [`handler`](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html) can accept the following event:
+```json
+{
+  ...
+  "pathParameters": {
+    "user_id": "abc123"
+  }
+}
+```
+
+and return the response:
+```json
+{
+  "statusCode": 200,
+  "body": "{\"user\":{\"id\":\"abc123\",\"email\":\"abc123@email.com\"}}"
+}
+```
+
+The following steps are recommended:
+
+1. Create a test (TDD!)
+1. Pass the test
+    1. Hint: `npm test aws-lambda/`
+1. Resolve all required types
+1. Compile the TypeScript source code
+    1. Hint: `npx tsc`
+1. Zip up the file for AWS
+    1. Hint: `chmod +x .pack_for_aws/run`
