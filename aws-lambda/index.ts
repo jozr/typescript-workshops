@@ -3,6 +3,6 @@
 
 import { APIGatewayProxyEvent, Context, APIGatewayProxyResult } from 'aws-lambda'
 
-export const handler = (_event: any, _context: any) => {
+export const handler = async (_event: any, _context: any) => {
   return null
 };
