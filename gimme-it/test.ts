@@ -1,4 +1,4 @@
-import { var1Boolean, var2Decimal, var3Array, var4Function } from './index'
+import { var1Boolean, var2Decimal, var3Array, var4Function, var5Object } from './index'
 
 describe('Gimme It', () => {
   // Export var1Boolean variable of boolean type with value true.
@@ -16,8 +16,18 @@ describe('Gimme It', () => {
     expect(var3Array).toEqual([1, 'test', { a: 3 }, 4, 5])
   })
 
-  // Export var4Function function that accepts a string and void.
+  // Export var4Function function that accepts a string and returns void.
   xit('Function', () => {
     expect(var4Function('hello world')).toBeUndefined
+  })
+
+  // Export var5Object object that defined by an interface.
+  xit('Object', () => {
+    expect(var5Object()).toEqual({
+      var1Boolean: true,
+      var2Decimal: 13,
+      var3Array: [1, 'test', { a: 3 }, 4, 5],
+      var4Function: undefined
+    })
   })
 })
