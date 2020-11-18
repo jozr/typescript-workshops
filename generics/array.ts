@@ -3,7 +3,7 @@
 // There are two ways to type an array
 
 const arrayOfNumbers1: number[] = [1,2,3]
-const arrayOfNumbers2: Array<number> = [1,2,3]
+const arrayOfNumbers2: Array<number | string> = [1,2,3, 'foo']
 
 // Usually the type[] syntax is preferrable for basic types, but the Generic type syntax can
 // be easier to read for more complex types

@@ -34,7 +34,7 @@ const logAndReturn1 = (arg: any): any => {
 
 // So let's add generic typing!
 
-const logAndReturn2 = <GenericType>(arg: GenericType): GenericType => {
+const logAndReturn2 = (arg: any): any => {
   console.log(arg);
 
   return arg;
