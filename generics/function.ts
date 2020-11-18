@@ -9,7 +9,7 @@ const logAndReturn1 = (arg: any): any => {
   return arg;
 }
 
-logAndReturn(1)
+logAndReturn1(1)
 // This returns the following:
 //
 // 1   (printed value in console)
@@ -35,7 +35,7 @@ logAndReturn(1)
 
 // So let's add generic typing!
 
-const logAndReturn2 = (arg: any): any => {
+const logAndReturn2 = <GenericType>(arg: GenericType): GenericType => {
   console.log(arg);
 
   return arg;
