@@ -1,7 +1,7 @@
-// Generics allow flexibility when adding type definitions to our code. They
+// Generics allow abstraction and flexibility when adding type definitions to our code.
 // The easiest way to understand the concept is through examples.
 
-// Let's take a normal TypeScript function as our starting point
+// Let's take a normal TypeScript function as our starting point.
 
 const logAndReturn1 = (arg: any): any => {
   console.log(arg);
@@ -9,7 +9,8 @@ const logAndReturn1 = (arg: any): any => {
   return arg;
 }
 
-// This returns the following when called
+logAndReturn(1)
+// This returns the following:
 //
 // 1   (printed value in console)
 // > 1 (returned value)
