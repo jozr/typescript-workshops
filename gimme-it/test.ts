@@ -23,7 +23,7 @@ describe('Gimme It', () => {
 
   // Export var5Object object that defined by an interface.
   xit('Object', () => {
-    expect(var5Object()).toEqual({
+    expect(var5Object).toEqual({
       var1Boolean: true,
       var2Decimal: 13,
       var3Array: [1, 'test', { a: 3 }, 4, 5],
