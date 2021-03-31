@@ -3,7 +3,20 @@ import mockEvent from './fixtures/event'
 import mockContext from './fixtures/context'
 
 it("returns expected response", async () => {
-  const result = await handler(mockEvent, mockContext)
+  const expectedResponse = {
+    "statusCode": 200,
+    "body": "{\"user\":{\"id\":\"abc123\",\"email\":\"abc123@email.com\"}}"
+  }
 
-  expect(result).toEqual(null)
+  const event = {
+    ...mockEvent,
+    "pathParameters": {
+      ...mockEvent.pathParameters,
+      "user_id": "abc123"
+    }
+  }
+
+  const result = await handler(event, mockContext)
+
+  expect(result).toEqual(expectedResponse)
 })

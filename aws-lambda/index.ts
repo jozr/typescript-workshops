@@ -3,6 +3,18 @@
 
 import { APIGatewayProxyEvent, Context, APIGatewayProxyResult } from 'aws-lambda'
 
-export const handler = async (_event: any, _context: any) => {
-  return null
+export const handler = async (event: APIGatewayProxyEvent, _context: Context): Promise<APIGatewayProxyResult> => {
+  const userId = event.pathParameters && event.pathParameters.user_id
+
+  const body = JSON.stringify({
+    user: {
+      id: userId,
+      email: `${userId}@email.com`
+    }
+  })
+
+  return {
+    statusCode: 200,
+    body
+  }
 };
